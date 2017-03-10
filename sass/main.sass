@@ -1,0 +1,634 @@
+@import "bourbon"
+@import "vars.sass"
+@import "fonts.sass";
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+
+
+//ALWAYS END
+@import "media"
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+body 
+	line-height: 1
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+	content: ''
+	content: none
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+
+$green: #7dc93f
+
+.contain
+	width: 800px
+	margin: 0 auto
+
+.container 
+	width: 600px
+	padding: 0
+
+i
+	color: $green
+
+h1
+	font-size: 30px
+	color: #434343
+	font-family: "MontserratBold", sans-serif
+
+h2
+	font-size: 22px
+	font-family: "MontserratBold", sans-serif
+	color: #434343
+
+h3
+	font-size: 18px
+	font-family: "MontserratBold", sans-serif
+	color: #434343
+
+h4
+	font-size: 14px
+	font-family: "PoppinsRegular", sans-serif
+	color: #999
+	letter-spacing: 7px
+
+p
+	color: #999999
+	font-family: "PoppinsRegular", sans-serif
+	line-height: 27px
+	font-size: 14px
+
+.flex_container 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: row
+	justify-content: Space-around
+
+header
+	min-height: 445px
+	.top_line
+		padding: 20px 0
+		.logo
+			display: inline-block
+			background-image: url(../img/logo.png)
+			width: 146px
+			height: 11px
+		ul
+			display: inline-block
+			float: right
+			li
+				margin-left: 30px
+				a
+					font-family: "PoppinsMedium", sans-serif
+					font-size: 14px
+					color: #434343
+					letter-spacing: 1px
+					transition: all 0.3s 
+					&:hover
+						color: $green
+						text-decoration: none
+					&:active, &:focus
+						text-decoration: none
+						color: $green
+	.top_line
+		padding: 20px 0
+		ul
+			li
+				display: inline-block
+	.header 
+		background-image: url(../img/header.png)
+		background-position: 0 0
+		min-height: 380px
+		text-align: center
+		h2
+			font-style: 16px !important
+			color: #fff
+			font-family: "MontserratRegular", sans-serif
+			margin-top: 100px
+		h1
+			font-size: 36px
+			color: #fff
+			margin-top: 40px
+		h4
+			letter-spacing: 15px
+			margin-top: 30px
+		button
+			background-color: $green
+			border: none
+			color: #fff
+			font-family: "MontserratRegular"
+			font-size: 14px
+			padding: 12px 25px
+			border-radius: 25px
+			margin-top: 50px
+			width: 150px
+			height: 35px
+			transition: all 0.3s 
+			&:active, &:focus
+				outline: none;
+			&:hover 
+				background-color: #94D260
+				width: 160px
+				height: 40px
+
+section.about
+	padding: 50px 0
+	.flex_container	
+		margin-bottom: 120px
+		.icon
+			background-image: url(../img/icon-set.png)
+			background-repeat: no-repeat
+			width: 90px
+			height: 90px
+			background-position: -10% 50%
+			border-radius: 50px
+			margin: 0 auto
+			&:nth-child(2)
+				background-position: 30% 50%
+		h3
+			text-align: center
+			margin-top: 30px
+		p
+			width: 162px
+			height: 65px
+			margin-top: 30px
+			text-align: center
+	h1
+		text-align: center
+		margin-bottom: 25px
+	h4
+		text-align: center
+		margin-bottom: 30px
+	.mini_border
+		width: 65px
+		height: 2px
+		border-bottom: 1px $green solid
+		margin: 0 auto
+		margin-bottom: 20px
+	span 
+		font-size: 14px
+		font-family: "PoppinsRegular", sans-serif
+		color: #434343
+		display: block
+		text-align: center
+		line-height: 24px
+		font-weight: 700
+		margin-bottom: 50px
+	.people_row
+		.flex_container
+			margin: 0
+			.people_item
+				text-align: center
+			h2
+				margin-top: 20px
+				margin-bottom: 10px
+				font-family: "MontserratRegular", sans-serif
+				font-size: 15px
+			h3
+				margin: 0
+				font-family: "PoppinsRegular", sans-serif
+				font-size: 15px
+			.photo_one, .photo_two, .photo_three
+				width: 175px
+				height: 133px
+				position: relative
+				.inf
+					opacity: 0 
+					transition: all  0.9s linear
+					left: -30px
+					top: -30px
+					background-color: #fff
+					background-position: 69% 50%
+				&:hover
+					.inf
+						opacity: 1
+						display: block
+						position: absolute
+						top: 6px
+						left: 6px
+						width: 32px
+						height: 32px
+						background-color: $green
+						background-image: url(../img/icon-set.png)
+						border-radius: 3px
+						transition: all  0.6s 
+						&:hover
+							background-color: #94D260
+							cursor: pointer
+
+
+section.about
+	.flex_container
+		.about_item
+				&:nth-child(2) .icon
+					background-position: 22% 50%
+					background-color: $green
+
+section.about
+	.flex_container
+		.about_item
+				&:nth-child(3) .icon
+					background-position: 53% 50%
+
+section.video
+	min-height: 240px
+	background-image: url(../img/section.png)
+	h1
+		color: #fff
+		margin-top: 85px
+		text-align: center
+	.play_icon
+		width: 46px
+		height: 46px
+		background-color: $green
+		border-radius: 25px
+		margin: 0 auto
+		background-image: url(../img/icon-set.png)
+		background-position: 100% 50%
+		margin-top: 40px
+		transition: all 0.3s 
+		&:hover
+			background-color: #94D260
+			cursor: pointer
+
+section.skills
+	.flex_container
+		justify-content: Space-between
+		.skill
+			float: left
+			h1
+				margin-top: 60px
+			h4
+				margin-top: 15px
+				margin-bottom: 30px
+				letter-spacing: 1.5px
+			p
+				width: 290px
+				height: 75px
+			button
+				background-color: $green
+				border: none
+				color: #fff
+				font-family: "MontserratRegular"
+				font-size: 14px
+				padding: 12px 25px
+				border-radius: 25px
+				margin-top: 35px
+				width: 150px
+				height: 35px
+				transition: all 0.3s 
+				&:active, &:focus
+					outline: none;
+				&:hover 
+					background-color: #94D260
+					width: 160px
+					height: 40px
+		.progress_bar
+			margin-top: 75px
+			.progress_item
+				margin-bottom: 30px
+				span
+					font-family: "MontserratRegular", sans-serif
+					font-size: 14px
+				.percent
+					float: right
+					font-size: 14px
+					color: #999999
+					font-family: "MontserratRegular", sans-serif
+				.bar
+  				width: 255px
+  				background-color: #fff	
+  				height: 6px
+  				box-shadow: inset 0 -1px 3px rgba(0,0,0,.2)
+  				margin-top: 10px
+  				.progress
+  					display: block
+ 						height: 4px
+  					background-color: $green
+ 						border-radius: 3px
+
+section.skills
+	padding-bottom: 115px
+	.flex_container
+		justify-content: Space-between
+		.services
+			text-align: center
+			margin-top: 100px
+			height: 200px
+			p
+				width: 230px
+				height: 70px
+				margin-top: 30px
+				margin-bottom: 35px
+			button
+				background-color: $green
+				border: none
+				color: #fff
+				font-family: "MontserratRegular"
+				font-size: 14px
+				padding: 12px 25px
+				border-radius: 25px
+				width: 150px
+				height: 35px
+				transition: all 0.3s 
+				&:active, &:focus
+					outline: none;
+				&:hover 
+					background-color: #94D260
+					width: 160px
+					height: 40px
+
+section.number
+	height: 190px	
+	background-image: url(../img/section.png)
+	padding: 50px 0
+	.flex_container
+		.num_item
+			text-align: center
+			span
+				font-size: 59px
+				font-family: "OpenSansSemiBold", sans-serif
+				color: $green
+			.line
+				margin: 20px auto
+				width: 30px
+				height: 2px
+				border-bottom: 2px $green solid
+			h4
+				font-size: 15px
+				letter-spacing: 1px
+				color: #fff
+
+section.portfolio
+	padding-top: 70px
+	padding-bottom: 140px
+	text-align: center
+	h4
+		margin-top: 20px
+		margin-bottom: 40px
+	.port_item
+		width: 280px
+		height: 225px
+		margin-bottom: 30px
+		overflow: hidden
+		&:hover
+			border: 1px $green solid
+			transition: all 0.1s linear
+		img
+			transition: all 0.3s linear
+			&:hover
+				transform: scale(1.1)
+
+section.price
+	text-align: center
+	.mini_border
+		width: 65px
+		height: 2px
+		border-bottom: 1px $green solid
+		margin: 0 auto
+		margin-bottom: 50px
+	h4
+		margin-top: 25px
+		margin-bottom: 30px
+	.price_items
+		margin-bottom: 95px
+		.price_item
+			width: 190px
+			height: 330px
+			background-image: url(../img/price_item_bg.png)
+			box-shadow: 1px 0px 3px rgba(0,0,0,.2)
+			text-align: center
+			position: relative
+			border-radius: 3px
+			span
+				font-family: "PoppinsRegular", sans-serif
+				color: #fff
+				font-size: 40px
+				font-weight: 800
+				position: absolute
+				top: 5px
+				left: 63px
+			i
+				font-size: 25px
+				color: #fff
+				vertical-align: top
+				padding-top: 3px
+			h3
+				margin-top: 85px
+				padding-bottom: 30px
+				border-bottom: 1px solid #E1E1E1
+			li
+				padding: 15px 0
+				border-bottom: 1px solid #E1E1E1
+				font-family: "PoppinsRegular", sans-serif
+				font-size: 14px
+				color: #999
+				&:nth-child(3)
+					border: none
+			button
+				background-color: $green
+				border: none
+				color: #fff
+				font-family: "MontserratRegular"
+				font-size: 14px
+				padding: 12px 25px
+				border-radius: 25px
+				width: 150px
+				height: 35px
+				transition: all 0.3s 
+				margin-top: 7px
+				&:active, &:focus
+					outline: none;
+				&:hover 
+					background-color: #94D260
+					width: 160px
+					height: 40px
+		.price_item.middle
+			background-image: url(../img/price_item_bg_middle.png)
+			span, i
+				color: $green
+			h3, li
+				color: #fff
+			button
+				background-color: #fff
+				color: $green
+
+section.news
+	border: 1px #EBEBEB solid
+	margin-bottom: 125px
+	.shared
+		background-image: url(../img/shared.png)
+		height: 330px
+		padding: 10px
+		text-align: center
+		.border
+			border: 2px #9B9A99 solid
+			height: 310px
+			text-align: center
+		span
+			font-family: "OpenSansSemiBold", sans-serif
+			font-size: 24px
+			color: #fff
+			margin-top: 100px
+			display: inline-block
+		.mini_border
+			width: 65px
+			height: 2px
+			border-bottom: 2px #fff solid
+			margin: 0 auto
+			margin-bottom: 40px
+			margin-top: 20px	
+		ul
+			padding-left: 32px
+			li
+				display: inline-block
+				margin-right: 25px
+		i
+			color: #fff
+			font-size: 24px
+			&:hover
+				color: $green
+	.news_item
+		.news_content
+			border-bottom: 1px #EBEBEB solid
+			padding: 30px 20px
+			h3
+				font-family: "MontserratRegular", sans-serif 
+				color: #393c48
+			i
+				color: #393c48
+			h4
+				letter-spacing: 1px
+				color: #393c48
+				display: inline-block
+				font-family: "PoppinsRegular", sans-serif
+				margin-top: 15px
+				margin-bottom: 20px
+			p
+				color: #434343
+				line-height: 20px
+		a
+			height: 45px
+			width: 60px
+			background-color: $green
+			display: block
+			float: right
+			&:hover
+				background-color: #94D260
+			i
+				color: #fff
+				font-size: 19px
+				margin: 13px 20px
+
+section.qoute
+	text-align: center
+	padding-bottom: 120px
+	h4
+		letter-spacing: 0
+		color: #000000
+		font-family: "MontserratRegular"
+	.quotes
+		background-image: url(../img/icon-set.png)
+		width: 29px
+		height: 25px
+		background-position: 84% 45%
+		display: inline-block
+		margin-top: 1px
+	h1
+		display: inline-block
+		color: $green
+		margin-top: 25px
+		margin-bottom: 25px
+	i
+		color: #D6D6D6
+	p
+		font-family: "MontserratRegular", sans-serif
+
+footer
+	background-color: #323232
+	height: 150px
+	text-align: center
+	padding-top: 45px
+	padding-bottom: 45px
+	li
+		display: inline-block
+		margin-right: 35px
+		&:hover
+			a,i
+				color: $green
+				text-decoration: none
+		a
+			color: #fff
+			font-family: "PoppinsRegular", sans-serif
+			font-size: 14px
+		i
+			margin-right: 10px
+			font-size: 14px
+			color: #fff
+	h4
+		letter-spacing: 0
+		color: #fff
+		margin-top: 30px
